@@ -2186,6 +2186,9 @@ class Espresso(FileIOCalculator, object):
         return atoms
 
     def get_potential_energy(self, atoms=None, force_consistent=False):
+        if atoms is None:
+            atoms = self.atoms
+
         self.update(atoms)
         if force_consistent:
             return self.energy_free
