@@ -95,4 +95,5 @@ class Vibespresso(FileIOCalculator, object):
 
     @property
     def parameters(self):
-        return self.esp.parameters
+        _esp = Espresso(**self.arg)
+        return _esp.parameters
