@@ -92,3 +92,7 @@ class Vibespresso(FileIOCalculator, object):
 
     def get_version(self):
         return __version__
+
+    @property
+    def parameters(self):
+        return self.esp.parameters
